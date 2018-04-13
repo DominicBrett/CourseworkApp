@@ -39,6 +39,8 @@ namespace CourseworkApp.Controllers
         public ActionResult Contact()
         {
             return View(db.Researchers.ToList());
+            ViewBag.Results=(db.WorkLocations.ToList());
+            return PartialView();
         }
     }
 }
