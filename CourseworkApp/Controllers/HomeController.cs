@@ -29,26 +29,7 @@ namespace CourseworkApp.Controllers
         public ActionResult AdminPanel()
         {
             return View();  
-        }
-        [HttpGet]
-        public ActionResult AddUser()
-        {
-            return View();
-        }
-        [HttpPost]
-   
-        public ActionResult AddUser(User user)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Users.Add(user);
-                return RedirectToAction("UserList");
-            }
-            else
-            {
-                return View();
-            }
-        }
+        }  
        
         public ActionResult About()
         {
@@ -57,8 +38,7 @@ namespace CourseworkApp.Controllers
       
         public ActionResult Contact()
         {
-            var model = db.Researchers.ToList();
-            return View(model);
+            return View(db.Researchers.ToList());
         }
     }
 }

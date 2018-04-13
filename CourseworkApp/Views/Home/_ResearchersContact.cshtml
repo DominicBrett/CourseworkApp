@@ -11,16 +11,7 @@
 {
     <div class="researcher">
         <h1>@Html.DisplayFor(modelItem => item.Name)</h1>
-        <p>@Html.DisplayFor(modelItem => item.Biography)></p>
+        <p>You can contact @Html.DisplayFor(modelItem => item.Name) via their email : @Html.DisplayFor(modelItem => item.EMail)></p>
+        <p>Or call @Html.DisplayFor(modelItem => item.Name) on their work phone : @Html.DisplayFor(modelItem => item.WorkPhone)></p>
     </div>
 }
-
-
-
-
-
-
-
-
-
-
