@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CourseworkApp.Models.ConferenceCall>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ConferenceCallName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConferenceCallDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConferenceCallSummary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConferenceCallDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConferenceCallName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConferenceCallDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConferenceCallSummary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConferenceCallDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ConferenceCallID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ConferenceCallID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ConferenceCallID })
+        </td>
+    </tr>
+}
+
+</table>

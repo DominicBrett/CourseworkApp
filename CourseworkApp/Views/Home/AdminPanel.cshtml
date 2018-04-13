@@ -1,0 +1,22 @@
+﻿
+
+@{
+    ViewBag.Title = "AdminPanel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Request.IsAuthenticated)
+{
+<h2>AdminPanel</h2>
+
+<h3> Options </h3> <br>
+<a href="../Users">Manage Research Group Members</a> <br />
+<a href="../Reports">Manage Reports</a>
+<a href="../Events">Manage Events</a> <br />
+<a href="/Account/Register">Register New Admin Accounts</a>
+
+}
+else
+{
+    <h2> You are not singed in as an admin!</h2>
+    <h3> Please <a href="/Account/Login">Sign In</a></h3>
+}

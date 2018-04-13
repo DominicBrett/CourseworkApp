@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+    <style>
+        #AdminNotice{
+            background-color: red;
+            color: white;
+        }
+    </style>
+@if (Request.IsAuthenticated)
+{
+    <h2 id="AdminNotice"> Hello Admin, Go to <a href="Home/AdminPanel"> Admin Panel?</a></h2>
+}
+<h2>Upcoming Events</h2>
+<div>
+    @Html.Partial("_Events")
+</div>

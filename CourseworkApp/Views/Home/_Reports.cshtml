@@ -1,0 +1,19 @@
+﻿@model IEnumerable<CourseworkApp.Models.Report>
+<style>
+    .report {
+        background-color: lightgrey;
+        border: 1px solid black;
+        margin-top: 5%;
+        text-align: center;
+    }
+</style>
+@foreach (var item in Model)
+{
+    <div class="report">
+        <h1>@Html.DisplayFor(modelItem => item.ReportTitle)</h1>
+        <p>@Html.DisplayFor(modelItem => item.ReportAbstract)</p>
+        <p><a href="@Html.DisplayFor(modelItem => item.ReportLink)">Click here to view full report </a></p>
+    </div>
+}
+
+

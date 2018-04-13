@@ -1,0 +1,46 @@
+﻿@model IEnumerable<CourseworkApp.Models.Report>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ReportTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReportAbstract)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReportLink)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReportTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReportAbstract)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReportLink)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ReportID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ReportID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ReportID })
+        </td>
+    </tr>
+}
+
+</table>

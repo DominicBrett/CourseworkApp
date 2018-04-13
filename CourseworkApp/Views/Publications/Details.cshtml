@@ -1,0 +1,43 @@
+﻿@model CourseworkApp.Models.Publication
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Publication</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PublicationTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublicationTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublicationAbstract)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublicationAbstract)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublicationLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublicationLink)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PublicationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

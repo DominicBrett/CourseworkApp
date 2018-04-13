@@ -1,0 +1,51 @@
+﻿@model CourseworkApp.Models.ConferenceCall
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ConferenceCall</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ConferenceCallName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConferenceCallName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConferenceCallDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConferenceCallDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConferenceCallSummary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConferenceCallSummary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConferenceCallDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConferenceCallDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ConferenceCallID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
