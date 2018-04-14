@@ -15,7 +15,7 @@
         <p>You can contact @Html.DisplayFor(modelItem => item.Name) via their email : @Html.DisplayFor(modelItem => item.EMail)></p>
         <p>Or call @Html.DisplayFor(modelItem => item.Name) on their work phone : @Html.DisplayFor(modelItem => item.WorkPhone)></p>
         <!-- ATTEMPT TO FIX LATER
-        <p><a href="../WorkLocations/Details/" + @Html.DisplayFor(modelItem => item.WorkLocationID.ToString())> See Work Location Detials</a></p>
+        <p><a href="../WorkLocations/Details/" + Html.DisplayFor(modelItem => item.WorkLocationID.ToString())> See Work Location Detials</a></p>
             -->
     </div>
 }

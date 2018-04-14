@@ -187,7 +187,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Publication.cs" />
     <Compile Include="Models\Report.cs" />
-    <Compile Include="Views\Account\Researcher.cs" />
+    <Compile Include="Models\Researcher.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\WorkLocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

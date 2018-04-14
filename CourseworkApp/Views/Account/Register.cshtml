@@ -1,5 +1,10 @@
 ﻿@model CourseworkApp.Models.RegisterViewModel
-@{
+@{ 
+    //Throws an Exception but succeds in preventing unauthorised access
+    if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("../Home/Index");
+    }
     ViewBag.Title = "Register";
 }
 
