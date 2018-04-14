@@ -51,6 +51,6 @@ namespace CourseworkApp.Models
         public string MoreInfo { get; set; }
 
         public int WorkLocationID { get; set; }
-        //Do Should haves and could havse
-    }
+      
+}
 }

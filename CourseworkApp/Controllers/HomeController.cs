@@ -35,12 +35,10 @@ namespace CourseworkApp.Controllers
         {
             return View(db.Researchers.ToList());
         }
-      
+
         public ActionResult Contact()
         {
             return View(db.Researchers.ToList());
-            ViewBag.Results=(db.WorkLocations.ToList());
-            return PartialView();
         }
     }
 }

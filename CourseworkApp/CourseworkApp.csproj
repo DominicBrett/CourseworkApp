@@ -293,7 +293,6 @@
     <Content Include="Views\Researchers\Index.cshtml" />
     <Content Include="Views\Home\_ResearchersAbout.cshtml" />
     <Content Include="Views\Home\_ResearchersContact.cshtml" />
-    <Content Include="Views\Home\_WorkLocationResearchers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
