@@ -1,5 +1,9 @@
 ﻿@model CourseworkApp.Models.AddPhoneNumberViewModel
 @{
+    if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("/Home/Index");
+    }
     ViewBag.Title = "Phone Number";
 }
 

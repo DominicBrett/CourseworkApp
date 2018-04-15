@@ -1,11 +1,14 @@
 ﻿@model IEnumerable<CourseworkApp.Models.Event>
 
 @{
+    if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("/Home/Index");
+    }
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@if (Request.IsAuthenticated)
-{
+
 <h2>Evemts</h2>
 
 <p>
@@ -52,8 +55,4 @@
 }
 
 </table>
-}
-else
-{
-    <h2> This page is strictly for Admins only.</h2>
 }

@@ -1,6 +1,10 @@
 ﻿@model CourseworkApp.Models.ManageLoginsViewModel
 @using Microsoft.Owin.Security
 @{
+    if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("/Home/Index");
+    }
     ViewBag.Title = "Manage your external logins";
 }
 

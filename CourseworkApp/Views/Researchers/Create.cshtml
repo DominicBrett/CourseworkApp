@@ -1,6 +1,10 @@
 ﻿@model CourseworkApp.Models.Researcher
 
 @{
+    if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("/Home/Index");
+    }
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }

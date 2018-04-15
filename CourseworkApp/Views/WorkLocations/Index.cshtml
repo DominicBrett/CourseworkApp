@@ -1,6 +1,10 @@
 ﻿@model IEnumerable<CourseworkApp.Models.WorkLocation>
 
 @{
+    if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("/Home/Index");
+    }
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }

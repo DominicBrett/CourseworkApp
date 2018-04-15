@@ -1,6 +1,11 @@
 ﻿@model CourseworkApp.Models.WorkLocation
 
 @{
+    //Throws an Exception but succeds in preventing unauthorised access
+    if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("/Home/Index");
+    }
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }

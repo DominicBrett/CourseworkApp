@@ -1,5 +1,9 @@
 ﻿@model CourseworkApp.Models.IndexViewModel
 @{
+    if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("/Home/Index");
+    }
     ViewBag.Title = "Manage";
 }
 

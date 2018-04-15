@@ -1,5 +1,9 @@
 ﻿@model CourseworkApp.Models.VerifyPhoneNumberViewModel
 @{
+    if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("/Home/Index");
+    }
     ViewBag.Title = "Verify Phone Number";
 }
 
