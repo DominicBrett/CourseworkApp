@@ -23,26 +23,10 @@
         @Html.HiddenFor(model => model.ConferenceCallID)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ConferenceCallName, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ConferenceCallTitle, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ConferenceCallName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ConferenceCallName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ConferenceCallDescription, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ConferenceCallDescription, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ConferenceCallDescription, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ConferenceCallSummary, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ConferenceCallSummary, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ConferenceCallSummary, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.ConferenceCallTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConferenceCallTitle, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -51,6 +35,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ConferenceCallDate, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ConferenceCallDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ConferenceCallTranscript, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ConferenceCallTranscript, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConferenceCallTranscript, "", new { @class = "text-danger" })
             </div>
         </div>
 

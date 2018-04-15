@@ -17,27 +17,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ConferenceCallName)
+            @Html.DisplayNameFor(model => model.ConferenceCallTitle)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ConferenceCallName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ConferenceCallDescription)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ConferenceCallDescription)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ConferenceCallSummary)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ConferenceCallSummary)
+            @Html.DisplayFor(model => model.ConferenceCallTitle)
         </dd>
 
         <dt>
@@ -46,6 +30,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.ConferenceCallDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConferenceCallTranscript)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConferenceCallTranscript)
         </dd>
 
     </dl>
