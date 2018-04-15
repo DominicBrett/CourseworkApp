@@ -1,27 +1,10 @@
-﻿
-@model IEnumerable<CourseworkApp.Models.Researcher>
-<style>
-    .researcher {
-        background-color: lightgrey;
-        border: 1px solid black;
-        margin-top: 5%;
-        text-align: center;
+﻿@model IEnumerable<CourseworkApp.Models.Researcher>
+<div id="SearchResult">
+    @foreach (var item in Model)
+    {
+        <div class="boxArea">
+            <h1>@Html.DisplayFor(modelItem => item.Name)</h1>
+            <p>@Html.DisplayFor(modelItem => item.Biography)</p>
+        </div>
     }
-</style>
-@foreach (var item in Model)
-{
-    <div class="researcher">
-        <h1>@Html.DisplayFor(modelItem => item.Name)</h1>
-        <p>@Html.DisplayFor(modelItem => item.Biography)></p>
-    </div>
-}
-
-
-
-
-
-
-
-
-
-
+</div>

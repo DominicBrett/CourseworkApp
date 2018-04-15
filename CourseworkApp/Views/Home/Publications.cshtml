@@ -1,9 +1,22 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Publications";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+}
 <h2>Publications</h2>
-
+@using (Ajax.BeginForm("PublicationsSearch", "Home", new AjaxOptions
+{
+    UpdateTargetId = "SearchResults",
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace
+}))
+{
+    <input type="text" name="q" />
+    <input type="submit" id="SearchBtn" value="Search Reports" />
+}
+<div>
 @Html.Partial("_Publications")
+</div>

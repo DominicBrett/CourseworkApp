@@ -1,8 +1,24 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+}
 <h2>@ViewBag.Title.</h2>
-<br />
+@using (Ajax.BeginForm("ContactSearch", "Home", new AjaxOptions
+{
+    UpdateTargetId = "SearchResults",
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace
+}))
+{
+    <input type="text" name="q" />
+    <input type="submit" id="SearchBtn" value="Search Researcher Biographies" />
+}
+
+
+
 <h2> Chair and Co-Chair Websites : </h2>
 <h2> Our Chair's Website</h2>
 <p> <a href="http://www.kingston.ac.uk/staff/profile/professor-jamshid-dehmeshki-402/"> Visit our Chair's website</a></p>

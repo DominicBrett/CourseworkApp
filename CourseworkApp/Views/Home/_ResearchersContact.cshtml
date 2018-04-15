@@ -1,21 +1,15 @@
 ﻿
 @model IEnumerable<CourseworkApp.Models.Researcher>
-<style>
-    .researcher {
-        background-color: lightgrey;
-        border: 1px solid black;
-        margin-top: 5%;
-        text-align: center;
+<div id="SearchResult">
+    @foreach (var item in Model)
+    {
+        <div class="boxArea">
+            <h1>@Html.DisplayFor(modelItem => item.Name)</h1>
+            <p>You can contact @Html.DisplayFor(modelItem => item.Name) via their email : @Html.DisplayFor(modelItem => item.EMail)</p>
+            <p>Or call @Html.DisplayFor(modelItem => item.Name) on their work phone : @Html.DisplayFor(modelItem => item.WorkPhone)</p>
+            <!-- ATTEMPT TO FIX LATER
+            <p><a href="../WorkLocations/Details/" + Html.DisplayFor(modelItem => item.WorkLocationID.ToString())> See Work Location Detials</a></p>
+                -->
+        </div>
     }
-</style>
-@foreach (var item in Model)
-{
-    <div class="researcher">
-        <h1>@Html.DisplayFor(modelItem => item.Name)</h1>
-        <p>You can contact @Html.DisplayFor(modelItem => item.Name) via their email : @Html.DisplayFor(modelItem => item.EMail)></p>
-        <p>Or call @Html.DisplayFor(modelItem => item.Name) on their work phone : @Html.DisplayFor(modelItem => item.WorkPhone)></p>
-        <!-- ATTEMPT TO FIX LATER
-        <p><a href="../WorkLocations/Details/" + Html.DisplayFor(modelItem => item.WorkLocationID.ToString())> See Work Location Detials</a></p>
-            -->
-    </div>
-}
+</div>

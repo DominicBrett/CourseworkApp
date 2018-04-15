@@ -3,7 +3,21 @@
     ViewBag.Title = "Reports";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h2>Reports</h2>
-
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+}
+@using (Ajax.BeginForm("ReportsSearch", "Home", new AjaxOptions
+{
+    UpdateTargetId = "SearchResults",
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace
+}))
+{
+    <input type="text" name="q" />
+    <input type="submit" id="SearchBtn" value="Search Reports" />
+}
+<div>
 @Html.Partial("_Reports")
+</div>

@@ -1,17 +1,31 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-    <style>
-        #AdminNotice{
-            background-color: red;
-            color: white;
-        }
-    </style>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+}
+@using (Ajax.BeginForm("EventsSearch", "Home", new AjaxOptions
+{
+    UpdateTargetId = "SearchResults",
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace
+}))
+{  
+    <input type="text" name="q" />
+    <input type="submit" id="SearchBtn" value="Search Events" />
+}
+<style>
+    #AdminNotice {
+        background-color: red;
+        color: white;
+    }
+</style>
 @if (Request.IsAuthenticated)
 {
     <h2 id="AdminNotice"> Hello Admin, Go to <a href="Home/AdminPanel"> Admin Panel?</a></h2>
 }
 <h2>Upcoming Events</h2>
 <div>
-    @Html.Partial("_Events")
+@Html.Partial("_Events")
 </div>

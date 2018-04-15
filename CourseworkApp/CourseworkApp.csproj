@@ -174,7 +174,6 @@
     <Compile Include="Controllers\PublicationsController.cs" />
     <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\ResearchersController.cs" />
-    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\WorkLocationsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -211,6 +210,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\App.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -293,6 +293,7 @@
     <Content Include="Views\Researchers\Index.cshtml" />
     <Content Include="Views\Home\_ResearchersAbout.cshtml" />
     <Content Include="Views\Home\_ResearchersContact.cshtml" />
+    <Content Include="Views\Home\_ResearchersList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

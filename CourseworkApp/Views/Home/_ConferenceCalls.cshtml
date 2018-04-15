@@ -1,21 +1,11 @@
 ﻿@model IEnumerable<CourseworkApp.Models.ConferenceCall>
-<style>
-    .call {
-        background-color: lightgrey;
-        border: 1px solid black;
-        margin-top: 5%;
-        text-align: center;
-    }
-</style>
+<div id="SearchResults">
 @foreach (var item in Model)
 {
-    <div class="call">
+    <div class="boxArea">
         <h1>@Html.DisplayFor(modelItem => item.ConferenceCallTitle)</h1>
         <p>This conference call took place on : @Html.DisplayFor(modelItem => item.ConferenceCallDate)</p>
         <p>The event will take place at: @Html.DisplayFor(modelItem => item.ConferenceCallTranscript)</p>
     </div>
 }
-
-
-
-
+</div>

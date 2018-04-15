@@ -1,19 +1,12 @@
 ﻿@model IEnumerable<CourseworkApp.Models.Event>
-<style>
-    .event{
-        background-color: #f7f7f9;
-        border: lightgrey;
-        border-radius: 5px;
-        margin-top: 5%;
-        text-align: center;
-    }
-</style>
+<div id="SearchResult">
     @foreach (var item in Model)
     {
-        <div class="event">
+        <div class="boxArea">
             <h1>@Html.DisplayFor(modelItem => item.EventName)</h1>
             <p>@Html.DisplayFor(modelItem => item.EventDescription)</p>
             <p>The event will take place at: @Html.DisplayFor(modelItem => item.EventLocation)</p>
             <p>The event will take place on: @Html.DisplayFor(modelItem => item.EventDate)</p>
         </div>
     }
+</div>
