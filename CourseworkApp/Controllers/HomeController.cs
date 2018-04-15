@@ -59,7 +59,11 @@ namespace CourseworkApp.Controllers
         public ActionResult AdminPanel()
         {
             return View();  
-        }  
+        } 
+        public ActionResult ConferenceCallResearchers()
+        {
+            return View(db.ConferenceCallResearchers.ToList());
+        } 
        
         public ActionResult About()
         {

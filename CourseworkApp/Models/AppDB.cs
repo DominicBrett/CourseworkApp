@@ -11,13 +11,13 @@ namespace CourseworkApp.Models
     {
         public DbSet<Event> Events { get; set; }
         public DbSet<Report> Reports { get; set; }
+        public DbSet<ConferenceCallResearcher> ConferenceCallResearchers { get; set; } 
+        public DbSet<CourseworkApp.Models.Publication> Publications { get; set; }
 
-        public System.Data.Entity.DbSet<CourseworkApp.Models.Publication> Publications { get; set; }
+        public DbSet<CourseworkApp.Models.ConferenceCall> ConferenceCalls { get; set; }
 
-        public System.Data.Entity.DbSet<CourseworkApp.Models.ConferenceCall> ConferenceCalls { get; set; }
+        public DbSet<CourseworkApp.Models.WorkLocation> WorkLocations { get; set; }
 
-        public System.Data.Entity.DbSet<CourseworkApp.Models.WorkLocation> WorkLocations { get; set; }
-
-        public System.Data.Entity.DbSet<CourseworkApp.Models.Researcher> Researchers { get; set; }
+        public DbSet<CourseworkApp.Models.Researcher> Researchers { get; set; }
     }
 }
