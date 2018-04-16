@@ -6,16 +6,6 @@
     @Scripts.Render("~/bundles/jqueryval")
 }
 <h2>@ViewBag.Title.</h2>
-@using (Ajax.BeginForm("ContactSearch", "Home", new AjaxOptions
-{
-    UpdateTargetId = "SearchResults",
-    HttpMethod = "GET",
-    InsertionMode = InsertionMode.Replace
-}))
-{
-    <input type="text" name="q" />
-    <input type="submit" id="SearchBtn" value="Search Researcher Biographies" />
-}
 
 
 
@@ -27,5 +17,15 @@
 <p><a href="https://uk.linkedin.com/in/soran-habib-2b6b9360"> Visit our Co-Chair's Website</a></p>
 <br />
 <h2> All Researchers Contact Information : </h2>
+@using (Ajax.BeginForm("ContactSearch", "Home", new AjaxOptions
+{
+    UpdateTargetId = "SearchResults",
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace
+}))
+{
+    <input type="text" name="q" />
+    <input type="submit" id="SearchBtn" value="Search Researcher Biographies" />
+}
 
 @Html.Partial("_ResearchersContact")

@@ -6,6 +6,12 @@
     @Scripts.Render("~/bundles/jqueryval")
 }
 <h2>@ViewBag.Title</h2>
+
+
+<h2> Who are we?</h2>
+<p> We are a group of researchers aiming to expand human knowelge via our studies and reports.</p>
+
+<h2> Our Team</h2>
 @using (Ajax.BeginForm("AboutSearch", "Home", new AjaxOptions
 {
     UpdateTargetId = "SearchResults",
@@ -16,11 +22,5 @@
     <input type="text" name="q" />
     <input type="submit" id="SearchBtn" value="Search Researcher Biographies" />
 }
-
-
-<h2> Who are we?</h2>
-<p> We are a group of researchers aiming to expand human knowelge via our studies and reports.</p>
-
-<h2> Our Team</h2>
 
 @Html.Partial("_ResearchersAbout")

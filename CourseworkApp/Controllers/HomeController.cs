@@ -60,10 +60,7 @@ namespace CourseworkApp.Controllers
         {
             return View();  
         } 
-        public ActionResult ConferenceCallResearchers()
-        {
-            return View(db.ConferenceCallResearchers.ToList());
-        } 
+       
        
         public ActionResult About()
         {

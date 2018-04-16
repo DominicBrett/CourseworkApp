@@ -168,7 +168,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ConferenceCallResearchersController.cs" />
     <Compile Include="Controllers\ConferenceCallsController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -183,7 +182,6 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDB.cs" />
     <Compile Include="Models\ConferenceCall.cs" />
-    <Compile Include="Models\ConferenceCallResearcher.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -297,11 +295,6 @@
     <Content Include="Views\Home\_ResearchersAbout.cshtml" />
     <Content Include="Views\Home\_ResearchersContact.cshtml" />
     <Content Include="Views\Home\_ResearchersList.cshtml" />
-    <Content Include="Views\ConferenceCallResearchers\Create.cshtml" />
-    <Content Include="Views\ConferenceCallResearchers\Delete.cshtml" />
-    <Content Include="Views\ConferenceCallResearchers\Details.cshtml" />
-    <Content Include="Views\ConferenceCallResearchers\Edit.cshtml" />
-    <Content Include="Views\ConferenceCallResearchers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
