@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CourseworkApp.Models.ConferenceCall">
+    <Position X="0.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAQAAAAQAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ConferenceCall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseworkApp.Models.Event">
+    <Position X="3.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ECAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAIBAAAA=</HashCode>
+      <FileName>Models\Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseworkApp.Models.Publication">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAQAAAAAQAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Publication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseworkApp.Models.Report">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAQAAAAAAAAAAAAAACEAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Report.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseworkApp.Models.Researcher">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <AssociationLine Name="WorkLocation" Type="CourseworkApp.Models.WorkLocation" FixedFromPoint="true">
+      <Path>
+        <Point X="10" Y="7.563" />
+        <Point X="8.5" Y="7.563" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAKAAIAACIAAAAAAQEACBAAEAAgAAAgAAQAEg=</HashCode>
+      <FileName>Models\Researcher.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WorkLocation" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CourseworkApp.Models.WorkLocation">
+    <Position X="7" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAIAAAAAAQEAAAAAAAAAAAAgAAQAAA=</HashCode>
+      <FileName>Models\WorkLocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
